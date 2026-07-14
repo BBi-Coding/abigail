@@ -1,17 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export', // Generates static HTML/CSS/JS in an 'out/' folder for GitHub Pages
+  output: 'export',
   images: {
-    unoptimized: true, // Disables the server-side image optimizer (required for static hosting)
+    unoptimized: true,
   },
-  
-  /* 
-    👉 UNCOMMENT THE LINE BELOW IF:
-    Your GitHub URL looks like: https://<your-username>.github.io/<your-repo-name>/
-    Replace 'your-repo-name' with the exact name of your GitHub repository.
-  */
-  // basePath: '/your-repo-name',
+  basePath: '/abigail',       // Tells Next.js our sub-path for routing
+  assetPrefix: '/abigail/',   // Tells Next.js where to look for CSS/JS (note the trailing slash!)
 };
 
 export default nextConfig;

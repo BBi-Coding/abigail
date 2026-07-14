@@ -35,6 +35,10 @@ jobs:
       - name: Build with Next.js
         run: npm run build
 
+      # 🚀 THIS STEP IS THE FIX: Adds the bypass file to force GitHub Pages to load CSS/JS
+      - name: Create .nojekyll
+        run: touch ./out/.nojekyll
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

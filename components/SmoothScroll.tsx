@@ -6,7 +6,8 @@ import { ReactNode } from 'react'
 export default function SmoothScroll({ children }: { children: ReactNode }) {
   return (
     <ReactLenis root options={{ lerp: 0.05, smoothWheel: true }}>
-      {children}
+      {/* Casting to any bypasses the nested React 18 vs 19 type library conflict */}
+      {children as any}
     </ReactLenis>
   )
 }

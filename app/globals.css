@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  /* Premium Palette */
+  --color-background: #FFFFFF;
+  --color-foreground: #111111;
+  --color-accent: #22C55E;
+  --color-subtle: #F5F5F5;
+  --color-border: #EAEAEA;
+
+  /* Premium Typography */
+  --font-heading: var(--font-space-grotesk);
+  --font-body: var(--font-inter);
+  
+  /* Integrates Bickham with Next.js Google font variables fallback */
+  --font-script: "bickham-script-pro", var(--font-pinyon), cursive;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    -webkit-font-smoothing: antialiased;
+  }
+}
